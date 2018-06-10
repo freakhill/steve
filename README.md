@@ -5,10 +5,10 @@ custom_mark10
 digraph steve {
     rankdir=LR;
     size="8,5"
-    node [shape = doublecircle]; Neutral PKB LWV RWV ALB SWY DCK FLK Down;
+    node [shape = doublecircle]; Neutral PKB LWV RWV ALB SWY DCK FLK DOWN;
     node [shape = circle];
     subgraph clusterFromNeutral {
-        rank = same; Neutral; PKB; LWV;
+        rank = same; Neutral; PKB; LWV; RWV; ALB; SWY; DCK; FLK;
     }
     Neutral -> PKB [ label = "f3+4" ];
     Neutral -> LWV [ label = "3" ];
