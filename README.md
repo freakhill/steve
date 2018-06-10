@@ -7,6 +7,9 @@ digraph steve {
     size="8,5"
     node [shape = doublecircle]; Neutral PKB LWV RWV ALB SWY DCK FLK Down;
     node [shape = circle];
+    subgraph clusterFromNeutral {
+        rank = same; Neutral; PKB; LWV;
+    }
     Neutral -> PKB [ label = "f3+4" ];
     Neutral -> LWV [ label = "3" ];
     Neutral -> RWV [ label = "4" ];
