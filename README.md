@@ -64,7 +64,8 @@ digraph steve {
     "FLK 1,1,1" [ label = "1,1,1 (i12)" ];
     "FLK 1,d+1" [ label = "1,d+1 (i12) high,(d)high 0/KND/CS" ];
     "FLK 1,f+1" [ label = "1,f+1 (i12) high,(d)mid -5/0/KND" ];
-    "FLK b+2" [ label = "b+2 (i19) pc8~13 -10/KND/KND" ];
+    "FLK b+2" [ label = "b+2 (i19) pc8~13 -10/KND/KND high, right-steppable" ];
+    "FLK 2" [ label = "2 (i23) 0/KND/KND" ];
     FLK -> "FLK 1";
     FLK -> "FLK 1,1";
     FLK -> "FLK 1,1,1";
@@ -72,6 +73,7 @@ digraph steve {
     FLK -> "FLK 1,d+1";
     FLK -> "FLK 1,f+1";
     FLK -> "FLK b+2";
+    FLK -> "FLK 2";
     "FLK 1,d+1" -> { "DMG db+2"; "DMG f,F+2"; };
     "FLK 1" -> FLK [ label = "b -1/+10/+10" ];
     "FLK 1,1" -> FLK [ label = "b -3/+5/+5" ];
@@ -83,6 +85,7 @@ digraph steve {
     "FLK 1,f+1" -> "DMG f,F+2" [ label = "on 2nd hit CH" ];
     "FLK b+2" -> "DMG f,F+2" [ label = "on hit" ];
     "FLK b+2" -> "DMG FLK b+2";
+    "FLK 2" -> "DMG db+2";
     // from ALB
     "ALB 2" [ label = "2" ];
     
