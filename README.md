@@ -62,9 +62,13 @@ digraph steve {
     "FLK 1" [ label = "1 (i12)" ];
     "FLK 1,1" [ label = "1,1 (i12)" ];
     "FLK 1,1,1" [ label = "1,1,1 (i12)" ];
+    "FLK 1,d+1" [ label = "1,d+1 (i12) 0/KND/CS" ];
     FLK -> "FLK 1";
     FLK -> "FLK 1,1";
     FLK -> "FLK 1,1,1";
+    FLK -> "FLK 1,d+1";
+    FLK -> "FLK 1,d+1";
+    "FLK 1,d+1" -> { "DMG db+2"; "DMG f,F+2"; };
     "FLK 1" -> FLK [ label = "b -1/+10/+10" ];
     "FLK 1,1" -> FLK [ label = "b -3/+5/+5" ];
     "FLK 1,1,1" -> FLK [ label = "b -4/+4/+4" ];
@@ -75,6 +79,18 @@ digraph steve {
     
     // from ALB
     "ALB 2" [ label = "2" ];
+    
+    // ==============================================
+    // GUARANTEED DAMAGE!
+    // ==============================================
+    node [ shape = rectangle ];
+    "DMG db+2" [ label = "db+2" ];
+    "DMG f,F+2" [ label = "f,F+2" ];
+    
+    // ==============================================
+    // COMBOS!
+    // ==============================================
+    node [ shape = doublerectangle ];
 }
 custom_mark10
 </details>
