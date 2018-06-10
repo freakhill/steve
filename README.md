@@ -2,20 +2,19 @@
 <details> 
 <summary></summary>
 custom_mark10
-  digraph G {
-    size ="4,4";
-    main [shape=box];
-    main -> parse [weight=8];
-    parse -> execute;
-    main -> init [style=dotted];
-    main -> cleanup;
-    execute -> { make_string; printf};
-    init -> make_string;
-    edge [color=red];
-    main -> printf [style=bold,label="100 times"];
-    make_string [label="make a string"];
-    node [shape=box,style=filled,color=".7 .3 1.0"];
-    execute -> compare;
-  }
-custom_mark10
+digraph steve {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; Neutral PKB LWV RMV ALB SWY DCK FLK Down;
+	node [shape = circle];
+	Neutral -> PKB [ label = "f3+4" ];
+    Neutral -> LWV [ label = "3" ];
+    Neutral -> RWV [ label = "4" ];
+    Neutral -> ALB [ label = "3+4" ];
+    Neutral -> SWY [ label = "b3 or b4" ];
+    Neutral -> DCK [ label = "f3 or f4" ];
+    Neutral -> FLK [ label = "b3+4" ];
+    Neutral -> b1;
+    b1 -> FLK [ label = "b" ];
+}
 </details>
