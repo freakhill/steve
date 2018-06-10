@@ -92,14 +92,14 @@ digraph steve {
     // ==============================================
     // GUARANTEED DAMAGE!
     // ==============================================
-    node [ shape = rectangle ];
+    node [ shape = box ];
     "DMG db+2" [ label = "db+2" ];
     "DMG f,F+2" [ label = "f,F+2 (floor breaks)" ];
     
     // ==============================================
     // COMBOS!
     // ==============================================
-    node [ shape = doublerectangle ];
+    node [ shape = box3d ];
     "DMG FLK b+2" [ label = "FLK b+2, DCK1+2,2,b+3+4~db~n,1 (iWS1) f+1,1~b (FLK), DCKf+2 S! (<- extended duck and dash) df+1+2" ];
 }
 custom_mark10
