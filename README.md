@@ -9,9 +9,9 @@ digraph steve {
     node [shape = circle];
 
     // stances
-    subgraph clusterFromNeutral {
-        rank = same; Neutral; PKB; LWV; RWV; ALB; SWY; DCK; FLK;
-    }
+    //subgraph clusterFromNeutral {
+    //    rank = same; Neutral; PKB; LWV; RWV; ALB; SWY; DCK; FLK;
+    //}
 
     // switch to stances
     Neutral -> PKB [ label = "f3+4" ];
@@ -29,15 +29,21 @@ digraph steve {
     "1,2,1" [ label "1,2,1 (i10)" ];
     "1,d+1" [ label "1,d+1 (i10)" ];
     "1,1,d+1" [ label "1,1,d+1 (i10)" ];
-    "2,1" [ label "2,1 )i12)" ];
+    "2,1" [ label "2,1 (i12)" ];
     Neutral -> "b+1";
     Neutral -> "qcf+1";
+    Neutral -> "df+1,2~1";
+    Neutral -> "1,2,1";
+    Neutral -> "1,d+1",
+    Neutral -> "1,1,d+1";
+    Neutral -> "2,1";
     "b+1" -> FLK [ label = "b -1/+9/CS" ];
     "qcf+1" -> FLK [ label = "b -3/KND/KND" ];
     "df+1,2~1" -> FLK [ label = "b 0/+4/CS" ];
     "1,2,1" -> FLK [ label = "b -1/+5/+5" ];
     "1,d+1" -> FLK [ label = "b 0/+6/+11" ];
     "1,1,d+1" -> FLK [ label = "b 0/+6/+11" ];
+    "2,1" -> FLK [ label = "b +3/+14GB/+14" ];
     
 }
 custom_mark10
