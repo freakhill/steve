@@ -97,7 +97,7 @@ digraph steve {
     // COMBOS!
     // ==============================================
     node [ shape = doublerectangle ];
-    "DMG FLK b+2" [ label = "FLK b+2, DCK1+2,2,b+3+4~db~n,1 (iWS1) f+1,1~b (FLK), DCKf+2 S! df+1+2" ];
+    "DMG FLK b+2" [ label = "FLK b+2, DCK1+2,2,b+3+4~db~n,1 (iWS1) f+1,1~b (FLK), DCKf+2 S! (<- extended duck and dash) df+1+2" ];
 }
 custom_mark10
 </details>
