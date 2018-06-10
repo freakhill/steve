@@ -66,6 +66,7 @@ digraph steve {
     "FLK 1,f+1" [ label = "1,f+1 (i12) high,(d)mid -5/0/KND" ];
     "FLK b+2" [ label = "b+2 (i19) pc8~13 -10/KND/KND high, right-steppable" ];
     "FLK 2" [ label = "2 (i23) 0/KND/KND" ];
+    "FLK 1+2" [ label = "1+2 (i12) Trhow" ];
     FLK -> "FLK 1";
     FLK -> "FLK 1,1";
     FLK -> "FLK 1,1,1";
@@ -74,6 +75,7 @@ digraph steve {
     FLK -> "FLK 1,f+1";
     FLK -> "FLK b+2";
     FLK -> "FLK 2";
+    FLK -> "FLK 1+2";
     "FLK 1,d+1" -> { "DMG db+2"; "DMG f,F+2"; };
     "FLK 1" -> FLK [ label = "b -1/+10/+10" ];
     "FLK 1,1" -> FLK [ label = "b -3/+5/+5" ];
@@ -86,6 +88,10 @@ digraph steve {
     "FLK b+2" -> "DMG f,F+2" [ label = "on hit" ];
     "FLK b+2" -> "DMG FLK b+2";
     "FLK 2" -> "DMG db+2";
+    "FLK 1+2" -> "OKI df+1+2" [ label = "meaty -12/KND/KND" ];
+    "FLK 1+2" -> "OKI db+2" [ label = "avoid with left-roll right" ];
+    "FLK 1+2" -> "OKI d+1+2" [ label "catch all" ];
+    
     // from ALB
     "ALB 2" [ label = "2" ];
     
@@ -101,6 +107,16 @@ digraph steve {
     // ==============================================
     node [ shape = box3d ];
     "DMG FLK b+2" [ label = "FLK b+2, DCK1+2,2,b+3+4~db~n,1 (iWS1) f+1,1~b (FLK), DCKf+2 S! (<- extended duck and dash) df+1+2" ];
+    
+    
+    // ==============================================
+    // OKI!
+    // ==============================================
+    node [ shape = component ];
+    "OKI df+1+2" [ label = "df+1+2" ];
+    "OKI db+2" [ label = "db+2" ];
+    "OKI d+1+2" [ label = "d+1+2" ];
+    
 }
 custom_mark10
 </details>
