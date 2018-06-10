@@ -62,12 +62,16 @@ digraph steve {
     "FLK 1" [ label = "1 (i12)" ];
     "FLK 1,1" [ label = "1,1 (i12)" ];
     "FLK 1,1,1" [ label = "1,1,1 (i12)" ];
-    "FLK 1,d+1" [ label = "1,d+1 (i12) 0/KND/CS" ];
+    "FLK 1,d+1" [ label = "1,d+1 (i12) high,(d)high 0/KND/CS" ];
+    "FLK 1,f+1" [ label = "1,f+1 (i12) high,(d)mid -5/0/KND" ];
+    "FLK b+2" [ label = "b+2 (i19) pc8~13 -10/KND/KND" ];
     FLK -> "FLK 1";
     FLK -> "FLK 1,1";
     FLK -> "FLK 1,1,1";
     FLK -> "FLK 1,d+1";
     FLK -> "FLK 1,d+1";
+    FLK -> "FLK 1,f+1";
+    FLK -> "FLK b+2";
     "FLK 1,d+1" -> { "DMG db+2"; "DMG f,F+2"; };
     "FLK 1" -> FLK [ label = "b -1/+10/+10" ];
     "FLK 1,1" -> FLK [ label = "b -3/+5/+5" ];
@@ -76,7 +80,9 @@ digraph steve {
     "FLK 1" -> "ALB 2" [ label = "b+3+4,2 CH combo" ];
     "FLK 1,1" -> ALB [ label = "b+3+4" ];
     "FLK 1,1,1" -> ALB [ label = "b+3+4" ];
-    
+    "FLK 1,f+1" -> "DMG f,F+2" [ label = "on 2nd hit CH" ];
+    "FLK b+2" -> "DMG f,F+2" [ label = "on hit" ];
+    "FLK b+2" -> "DMG FLK b+2";
     // from ALB
     "ALB 2" [ label = "2" ];
     
@@ -85,12 +91,13 @@ digraph steve {
     // ==============================================
     node [ shape = rectangle ];
     "DMG db+2" [ label = "db+2" ];
-    "DMG f,F+2" [ label = "f,F+2" ];
+    "DMG f,F+2" [ label = "f,F+2 (floor breaks)" ];
     
     // ==============================================
     // COMBOS!
     // ==============================================
     node [ shape = doublerectangle ];
+    "DMG FLK b+2" [ label = "FLK b+2, DCK1+2,2,b+3+4~db~n,1 (iWS1) f+1,1~b (FLK), DCKf+2 S! df+1+2" ];
 }
 custom_mark10
 </details>
