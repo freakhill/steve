@@ -2,11 +2,11 @@
 <details> 
 <summary></summary>
 digraph steve {
-	rankdir=LR;
-	size="8,5"
-	node [shape = doublecircle]; Neutral PKB LWV RWV ALB SWY DCK FLK Down;
-	node [shape = circle];
-	Neutral -> PKB [ label = "f3+4" ];
+    rankdir=LR;
+    size="8,5"
+    node [shape = doublecircle]; Neutral PKB LWV RWV ALB SWY DCK FLK Down;
+    node [shape = circle];
+    Neutral -> PKB [ label = "f3+4" ];
     Neutral -> LWV [ label = "3" ];
     Neutral -> RWV [ label = "4" ];
     Neutral -> ALB [ label = "3+4" ];
