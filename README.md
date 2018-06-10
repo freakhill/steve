@@ -68,6 +68,9 @@ digraph steve {
     "FLK 1" -> FLK [ label = "b -1/+10/+10" ];
     "FLK 1,1" -> FLK [ label = "b -3/+5/+5" ];
     "FLK 1,1,1" -> FLK [ label = "b -4/+4/+4" ];
+    "FLK 1" -> ALB [ label = "b+3+4" ];
+    "FLK 1,1" -> ALB [ label = "b+3+4" ];
+    "FLK 1,1,1" -> ALB [ label = "b+3+4" ];
     
 }
 custom_mark10
